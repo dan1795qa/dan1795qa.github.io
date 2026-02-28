@@ -1,614 +1,379 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QA Engineer — Daniil Babarin</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/sections.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/about.css" />
-    <link rel="stylesheet" href="css/experience.css" />
-    <link rel="stylesheet" href="css/skills.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-  <body>
-    <div class="bug-animation" aria-hidden="true">
-      <div class="bug bug--1">
-        <img src="images/bug.png" alt="Bug" class="bug__image" />
-      </div>
-      <div class="bug bug--2">
-        <img src="images/bug.png" alt="Bug" class="bug__image" />
-      </div>
-      <div class="bug bug--3">
-        <img src="images/bug.png" alt="Bug" class="bug__image" />
-      </div>
-      <div class="bug bug--magnifier magnifier">
-        <svg
-          class="magnifier__image"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="40"
-            cy="40"
-            r="25"
-            fill="none"
-            stroke="#7c5cff"
-            stroke-width="4"
-          />
-          <line
-            x1="60"
-            y1="60"
-            x2="80"
-            y2="80"
-            stroke="#7c5cff"
-            stroke-width="4"
-            stroke-linecap="round"
-          />
-          <circle
-            cx="40"
-            cy="40"
-            r="20"
-            fill="none"
-            stroke="#ffd700"
-            stroke-width="2"
-            opacity="0.6"
-          />
-        </svg>
-      </div>
-    </div>
-    <header class="main-header">
-      <div class="main-header__container">
-        <a href="index.html" class="main-header__logo-section">
-          <img src="images/Logo.png" alt="Logo" class="main-header__logo" />
-          <span class="main-header__title">QA-инженер</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио QA Engineer - профессиональные услуги тестирования ПО">
+  <title>QA Engineer | Даниил Бабарин</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./icons/bug.png" type="image/x-icon">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+          <img src="./icons/bug.png" width="30px" alt="Logo">
+          QA Engineer
         </a>
-        <nav class="main-header__nav" id="main-nav">
-          <a href="#home" class="main-header__link">Главная</a>
-          <a href="#about" class="main-header__link">Про меня</a>
-          <a href="#experience" class="main-header__link">Образование/Опыт</a>
-          <a href="#cases" class="main-header__link">Мои навыки</a>
-          <a href="#contact" class="main-header__link">Контакты</a>
-        </nav>
-        <button
-          class="main-header__lang-toggle"
-          id="lang-toggle"
-          aria-label="Switch language"
-        >
-          EN
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <button
-          class="main-header__burger"
-          id="burger-btn"
-          aria-label="Меню"
-          aria-expanded="false"
-        >
-          <span class="main-header__burger-line"></span>
-          <span class="main-header__burger-line"></span>
-          <span class="main-header__burger-line"></span>
-        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="#home">Главная</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Обо мне</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Опыт</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Курсы</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Навыки</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+            <!-- Кнопка переключения на английский -->
+            <li class="nav-item ms-3">
+              <a href="index_en.html" class="btn btn-outline-primary">ENG</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
-    <main>
-      <header class="hero" id="home">
-        <div class="hero__layout">
-          <div class="hero__content">
-            <p class="hero__kicker">Качество — моя зона ответственности</p>
-            <h1>Даниил Бабарин</h1>
-            <p class="hero__subtitle">
-              QA Engineer. Специализация: web, mobile и backend тестирование
-            </p>
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#cases">Портфолио</a>
-              <a class="btn btn--ghost" href="#contact">Связаться</a>
-            </div>
-          </div>
-          <aside class="hero__media" aria-label="Портрет Даниила Бабарина">
-            <figure class="hero__portrait">
-              <img
-                src="./images/foto1.jpg"
-                alt="Портрет Даниила Бабарина"
-                loading="lazy"
-              />
-            </figure>
-          </aside>
-        </div>
-      </header>
-      <section class="section section--light" id="about">
-        <div class="section__header">
-          <h2>Обо мне</h2>
-          <p>
-            Выстраиваю процессы тестирования в продуктовых и
-            enterprise-командах, внедряю автоматизацию и повышаю осознанность
-            бизнеса в вопросах качества.
-          </p>
-        </div>
-        <div class="grid grid--two">
-          <article class="card">
-            <h3>Ключевые компетенции</h3>
-            <ul class="list">
-              <li>Разработка тестовой стратегии под цели бизнеса</li>
-              <li>Построение CI/CD pipeline с QA-практиками</li>
-              <li>Настройка метрик качества и отчётности</li>
-              <li>Менторинг QA-команды и аудит процессов</li>
-              <!-- <li>Автоматизация тестирования API (Python)</li> -->
-            </ul>
-          </article>
-          <article class="card card--accent">
-            <h3>Навыки</h3>
-            <div class="chip-grid">
-              <button type="button" class="chip">
-                Английский язык B1
-              </button>
-              <button type="button" class="chip">Теория тестирования</button>
-              <button type="button" class="chip">
-                Техники тест-дизайна
-              </button>
-              <button type="button" class="chip" data-tool="qase">Тестовая документация</button>
-              <button type="button" class="chip">
-                Agile/Scrum методологии
-              </button>
-              <button type="button" class="chip">
-                Test Management Systems
-              </button>
-              <button type="button" class="chip">
-                Клиент-серверная архитектура
-              </button>
-              <button type="button" class="chip">
-                REST API
-              </button>
-              <button type="button" class="chip">
-                SOAP
-              </button>
-              <button type="button" class="chip">
-                GraphQL
-              </button>
-              <button type="button" class="chip">
-                gRPC
-              </button>
-              <button type="button" class="chip">
-                WebSocket
-              </button>
-              <button type="button" class="chip">
-                Монолиты и микросервисы
-              </button>
-              <button type="button" class="chip">SQL</button>
-              <button type="button" class="chip">
-                Figma
-              </button>
-              <button type="button" class="chip">Bash</button>
-              <button type="button" class="chip">
-                Git
-              </button>
-              <button type="button" class="chip">
-                Мобильное тестирование
-              </button>
-              <button type="button" class="chip">
-                CI/CD
-              </button>
-              <button type="button" class="chip">
-                Docker
-              </button>
-              <button type="button" class="chip">
-                Python
-              </button>
-              <button type="button" class="chip">
-                Автоматизация тестирования API
-              </button>
-              <button type="button" class="chip">AI-инструменты</button>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="section" id="experience">
-        <div class="section__header">
-          <h2>Опыт</h2>
-          <p>
-            Работаю на стыке бизнеса и инженерии. Мыслю как пользователь,
-            тестирую как инженер.
-          </p>
-        </div>
-        <div class="experience-grid">
-          <div class="experience-card">
-            <img
-              src="images/graduate 1.png"
-              alt="Образование"
-              class="experience-card__icon"
-            />
-            <h3 class="experience-card__title">Образование</h3>
-            <p class="experience-card__institution">
-              Московский государственный университет
-            </p>
-            <p class="experience-card__specialty">
-              Специальность: Информационные системы и технологии
-            </p>
-            <p class="experience-card__period">2015 — 2019</p>
-          </div>
-          <div class="experience-card">
-            <img
-              src="images/experience 1.png"
-              alt="Опыт работы"
-              class="experience-card__icon"
-            />
-            <h3 class="experience-card__title">Опыт работы</h3>
-            <p class="experience-card__institution">DataPulse</p>
-            <p class="experience-card__position">Lead QA Engineer</p>
-            <p class="experience-card__period">2023 — настоящее время</p>
-            <p class="experience-card__description">
-              Руководство QA-департаментом в fintech-сегменте. Ускорила регресс
-              с 36 до 12 часов за счёт BDD и параллельных прогонов.
-            </p>
-          </div>
-          <div class="experience-card">
-            <img
-              src="images/apprenticeship 1.png"
-              alt="Курсы"
-              class="experience-card__icon"
-            />
-            <h3 class="experience-card__title">Курсы</h3>
-            <p class="experience-card__course">Курсы Вадима Ксендзова</p>
-            <p class="experience-card__course">
-              ОНЛАЙН-КУРС "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ"”
-            </p>
-            <p class="experience-card__period">2020 — 2022</p>
-            <p class="experience-card__course">Курсы Артема Русова</p>
-            <p class="experience-card__course">
-              ОНЛАЙН-КУРС "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ. УРОВЕНЬ PRO"
-            </p>
-            <p class="experience-card__period">2025</p>
-            <p class="experience-card__course">
-              РУП "Национальный центр обмена трафика"
-            </p>
-            <p class="experience-card__course">
-              КУРС "БЕЗОПАСНОСТЬ КОРПОРАТИВНЫХ ИНФОРМАЦИОННЫХ СЕТЕЙ"
-            </p>
-            <p class="experience-card__period">2023</p>
-          </div>
-          <div class="experience-card">
-            <img
-              src="images/internship 1.png"
-              alt="Стажировка"
-              class="experience-card__icon"
-            />
-            <h3 class="experience-card__title">
-              Стажировка / Коммерческая практика
-            </h3>
-            <p class="experience-card__institution">Курсы Вадима Ксендзова</p>
-            <p class="experience-card__institution">Практика "SandBox Web"</p>
-            <p class="experience-card__period">ноябрь-декабрь 2025</p>
-            <p class="experience-card__description">
-              Практика по тестированию веб-приложения. Работа с тест-кейсами,
-              баг-репортами, участие в Ad-hoc тестировании.
-            </p>
-            <p class="experience-card__institution">Capital.com</p>
-            <p class="experience-card__institution">Коммерческая практика</p>
-            <p class="experience-card__period">январь 2026 - по наст.вр.</p>
-            <p class="experience-card__description">
-              Тестирование веб-приложения. Работа с тест-кейсами, баг-репортами,
-              участие в Ad-hoc тестировании.
-            </p>
-            <p class="experience-card__institution">Qmedia.by</p>
-            <p class="experience-card__institution">Коммерческая практика</p>
-            <p class="experience-card__period">январь 2026 - по наст.вр.</p>
-            <p class="experience-card__description">
-              Тестирование REST API (интеграция 1С с сайтом vtapt.by). Работа с
-              требованиями, тестовой документацией, баг-репортами. Написание
-              автотестов в Postman
-            </p>
-            <p class="experience-card__institution">Qmedia.by</p>
-            <p class="experience-card__institution">Коммерческая практика</p>
-            <p class="experience-card__period">февраль 2026 - по наст.вр.</p>
-            <p class="experience-card__description">
-              Тестирование REST API (интеграция 1С с сайтом vtapt.by). Работа с
-              требованиями, тестовой документацией, баг-репортами. Написание
-              автотестов в Postman
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="section section--highlight" id="cases">
-        <div class="section__header">
-          <h2>Мои навыки</h2>
-          <p>
-            Выберите инструмент, чтобы увидеть детальную информацию о навыках
-            работы с ним.
-          </p>
-        </div>
+    </nav>
+  </header>
 
-        
-
-        <div class="skills-category">
-          <h3 class="skills-category__title">Ручное тестирование</h3>
-          <div class="skills-grid">
-            <div class="skill-item" data-tool="jira" data-category="manual">
-              <img src="example.png" alt="Jira" class="skill-item__logo" />
-              <span class="skill-item__name">Jira</span>
-            </div>
-            <div class="skill-item" data-tool="TestIT" data-category="manual">
-              <img src="#" alt="TestIT" class="skill-item__logo" />
-              <span class="skill-item__name">TestIT</span>
-            </div>
-            <div class="skill-item" data-tool="qase" data-category="manual">
-              <img src="" alt="Qase" class="skill-item__logo" />
-              <span class="skill-item__name">Qase</span>
-            </div>
-            <div class="skill-item" data-tool="devtools" data-category="manual">
-              <img src="" alt="devtools" class="skill-item__logo" />
-              <span class="skill-item__name">DevTools</span>
-            </div>
-            <div class="skill-item" data-tool="postman" data-category="manual">
-              <img
-                src="images/example.png"
-                alt="Postman"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">Postman</span>
-            </div>
-            <div class="skill-item" data-tool="charles" data-category="manual">
-              <img src="example.png" alt="Charles" class="skill-item__logo" />
-              <span class="skill-item__name">Charles</span>
-            </div>
-            <div class="skill-item" data-tool="proxyman" data-category="manual">
-              <img
-                src="images/example.png"
-                alt="proxyman"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">Proxyman</span>
-            </div>
-            <div class="skill-item" data-tool="sql" data-category="manual">
-              <img
-                src="images/example.png"
-                alt=" sql"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">SQL</span>
-            </div>
-            <div class="skill-item" data-tool="figma" data-category="manual">
-              <img
-                src="images/example.png"
-                alt="figma"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">Figma</span>
-            </div>
-            <div class="skill-item" data-tool="bash" data-category="manual">
-              <img
-                src="images/example.png"
-                alt="bash"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">Bash</span>
-            </div>
-            <div class="skill-item" data-tool="git" data-category="manual">
-              <img
-                src="images/example.png"
-                alt="git"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">Git</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="Android Studio"
-              data-category="manual"
-            >
-              <img
-                src="images/example.png"
-                alt="Android Studio"
-                class="skill-item__logo"
-              />
-              <span class="skill-item__name">Android Studio</span>
-            </div>
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center hero-content">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-4">Даниил Бабарин<br>QA Engineer</h1>
+          <p class="lead mb-5">QA инженер с коммерческим опытом тестирования</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane me-2"></i>Связаться со мной</a>
+            <a href="#experience" class="btn btn-outline-primary btn-lg"><i class="fas fa-arrow-down me-2"></i>Мой опыт</a>
           </div>
         </div>
-
-        <div class="skills-category">
-          <h3 class="skills-category__title">Автоматизация тестирования</h3>
-          <div class="skills-grid">
-            <div
-              class="skill-item"
-              data-tool="python"
-              data-category="automation"
-            >
-              <img src="example.png" alt="Python" class="skill-item__logo" />
-              <span class="skill-item__name">Python</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="httpx"
-              data-category="automation"
-            >
-              <img src="example.png" alt="HTTPX" class="skill-item__logo" />
-              <span class="skill-item__name">HTTPX</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="Faker"
-              data-category="automation"
-            >
-              <img src="example.png" alt="Faker" class="skill-item__logo" />
-              <span class="skill-item__name">Faker</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="pydantic"
-              data-category="automation"
-            >
-              <img src="example.png" alt="Pydantic" class="skill-item__logo" />
-              <span class="skill-item__name">Pydantic</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="pytest"
-              data-category="automation"
-            >
-              <img src="example.png" alt="Pytest" class="skill-item__logo" />
-              <span class="skill-item__name">Pytest</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="allure"
-              data-category="automation"
-            >
-              <img src="example.png" alt="Allure" class="skill-item__logo" />
-              <span class="skill-item__name">Allure</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="ci/cd"
-              data-category="automation"
-            >
-              <img src="example.png" alt="CI/CD" class="skill-item__logo" />
-              <span class="skill-item__name">CI/CD</span>
-            </div>
-            <div
-              class="skill-item"
-              data-tool="Docker"
-              data-category="automation"
-            >
-              <img src="example.png" alt="Docker" class="skill-item__logo" />
-              <span class="skill-item__name">Docker</span>
-            </div>
-          </div>
+        <div class="col-lg-6 d-none d-lg-block text-end">
+          <img src="./images/foto1.jpg" class="profile-img lazyload" alt="QA Engineer Даниил Бабарин" width="451" height="600" loading="lazy">
         </div>
-        <div class="skills-category">
-          <h3 class="skills-category__title">Владение языками</h3>
-          <div class="skills-list">
-            <div class="skill-badge">
-              <span class="skill-badge__name">Русский</span>
-              <span class="skill-badge__level">Родной</span>
-            </div>
-            <div class="skill-badge">
-              <span class="skill-badge__name">Английский</span>
-              <span class="skill-badge__level">B1</span>
-            </div>
-          </div>
-        </div>
-        <div class="skills-category">
-          <h3 class="skills-category__title">Hard Skills</h3>
-          <div class="skills-list">
-            <div class="skill-badge" data-tool="sql">SQL и реляционные БД</div>
-            <div class="skill-badge" data-tool="postman">
-              API тестирование (REST, GraphQL)
-            </div>
-            <div class="skill-badge" data-tool="charles">
-              Тестирование трафика
-            </div>
-            <div class="skill-badge" data-tool="jmeter">
-              Performance тестирование
-            </div>
-            <div class="skill-badge" data-tool="ci/cd">CI/CD интеграция</div>
-            <div class="skill-badge" data-tool="docker">
-              Docker и контейнеризация
-            </div>
-            <div class="skill-badge" data-tool="git">
-              Git и система контроля версий
-            </div>
-            <div class="skill-badge" data-tool="jira">
-              Agile/Scrum методологии
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-category">
-          <h3 class="skills-category__title">Soft Skills</h3>
-          <div class="skills-list">
-            <div class="skill-badge" data-tool="communication">
-              Коммуникация
-            </div>
-            <div class="skill-badge" data-tool="teamwork">Командная работа</div>
-            <div class="skill-badge" data-tool="problem_solving">
-              Решение проблем
-            </div>
-            <div class="skill-badge" data-tool="communication">
-              Критическое мышление
-            </div>
-            <div class="skill-badge" data-tool="adaptability">Адаптивность</div>
-          </div>
-        </div>
-      </section>
-      <section class="section" id="contact">
-        <div class="section__header">
-          <h2>Свяжитесь со мной</h2>
-          <p>Свяжитесь со мной через любую из указанных платформ.</p>
-        </div>
-        <div class="contact-layout">
-          <div class="contact-list">
-            <a
-              href="https://www.linkedin.com/in/danya1795/"
-              target="_blank"
-              rel="noopener"
-              class="contact-item"
-            >
-              <span class="contact-item__label">LinkedIn</span>
-              <span class="contact-item__value">linkedin.com/in/danya1795</span>
-            </a>
-            <a
-              href="https://t.me/TESTosterone1795"
-              target="_blank"
-              rel="noopener"
-              class="contact-item"
-            >
-              <span class="contact-item__label">Telegram</span>
-              <span class="contact-item__value">@TESTosterone1795</span>
-            </a>
-            <a href="mailto:dan1795dan@gmail.com" class="contact-item">
-              <span class="contact-item__label">Gmail</span>
-              <span class="contact-item__value">dan1795dan@gmail.com</span>
-            </a>
-            <a
-              href="https://github.com/dan1795qa"
-              target="_blank"
-              rel="noopener"
-              class="contact-item"
-            >
-              <span class="contact-item__label">Github</span>
-              <span class="contact-item__value">github.com/dan1795qa</span>
-            </a>
-          </div>
-          <div class="contact-photo">
-            <img
-              src="./images/foto2.jpg"
-              alt="Фото"
-              class="contact-photo__img"
-            />
-          </div>
-        </div>
-      </section>
-    </main>
-    <div class="modal" id="tool-modal" aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div
-        class="modal__dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="tool-modal-title"
-      >
-        <button
-          class="modal__close"
-          type="button"
-          data-modal-close
-          aria-label="Закрыть окно"
-        >
-          ×
-        </button>
-        <h3 class="modal__title" id="tool-modal-title"></h3>
-        <ul class="modal__list" id="tool-modal-list"></ul>
       </div>
     </div>
-    <footer class="footer">
-      <p>© 2026 Даниил Бабарин. QA Engineer.</p>
-    </footer>
-    <script src="js/script.js"></script>
-  </body>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title text-center">Обо мне</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <p>QA Engineer с коммерческим опытом тестирования более 3 месяцев. На проектах проводил исследовательское и ad-hoc тестирование  в рамках web-тестирования и  тестирования API, приобрел практический опыт работы с DevTools, Postman, Charles Proxy. Развил навыки по работе с документацией и написанию баг-репортов, разрабатывал с нуля чек-листы, уточнял требования у стейкхолдеров. Имею практические навыки написания фреймворка по автоматизации API на Python, продолжаю развивать данные навыки.  В дальнейшем планирую освоить автоматизацию тестирования UI.</p>
+          <p>Умею анализировать большой объем информации, выстраивать хорошие отношения в команде. Спокойно отношусь к изменениям, умею быстро переключаться между задачами. Хотел бы в дальнейшем углублять навыки в тестировании API и интеграционном тестировании микросервисов. Осваиваю тестирование GraphQL, gRPC, WebSocket.</p>
+          <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+              <div class="about-info-box">
+                <div class="bg-primary bg-opacity-10 p-2 rounded fixed-icon-size"><i class="fas fa-birthday-cake text-primary"></i></div>
+                <div><h5>Возраст</h5><p>31 лет</p></div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="about-info-box">
+                <div class="bg-primary bg-opacity-10 p-2 rounded fixed-icon-size"><i class="fas fa-map-marker-alt text-primary"></i></div>
+                <div><h5>Местоположение</h5><p>Минск, Беларусь</p></div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="about-info-box">
+                <div class="bg-primary bg-opacity-10 p-2 rounded fixed-icon-size"><i class="fas fa-graduation-cap text-primary"></i></div>
+                <div><h5>Образование</h5><p>Инженер. "Геодезия, картография и геоинформационные системы"</p></div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="about-info-box">
+                <div class="bg-primary bg-opacity-10 p-2 rounded fixed-icon-size"><i class="fas fa-briefcase text-primary"></i></div>
+                <div><h5>Опыт работы</h5><p>Более 3 месяцев коммерческого опыта</p></div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <div class="about-info-box">
+                <div class="bg-primary bg-opacity-10 p-2 rounded fixed-icon-size"><i class="fas fa-language text-primary"></i></div>
+                <div><h5>Языки</h5><p>Русский (родной), Английский (B1)</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/danya1795" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/dan1795qa" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="mailto:dan1795dan@gmail.com" target="_blank" class="social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">Опыт работы</h2>
+      <p class="text-center lead mb-5">Мой профессиональный путь в области тестирования ПО</p>
+      <div class="row">
+        <!-- Capital.com -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="job-card">
+            <div class="job-card-header">
+              <div class="company-logo"><i class="fas fa-laptop-code text-success"></i></div>
+              <div><div class="company-name">Capital.com</div><div class="job-date">Декабрь 2025 - Наст. время</div></div>
+            </div>
+            <div class="job-card-body">
+              <div class="job-title">Тестировщик</div>
+              <div class="project-name"><i class="fas fa-project-diagram"></i> Проект "Gruzovik.com"</div>
+              <div class="job-description">
+                <ul>
+                  <li>Провожу Ad-hoc тестирование веб-сайта</li>
+                  <li>Работаю с глоссарием и требованиями проекта, завожу баг-репорты и провожу retest-ы на своем окружении</li>
+                  <li>В работе использую DevTools</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-card-footer"><span class="job-type">Web-приложение</span><span class="text-muted">Коммерческий проект</span></div>
+          </div>
+        </div>
+        <!-- Qmedia.by -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="job-card">
+            <div class="job-card-header">
+              <div class="company-logo"><i class="fas fa-laptop-code text-success"></i></div>
+              <div><div class="company-name">Qmedia.by</div><div class="job-date">Январь 2026 - Наст. время</div></div>
+            </div>
+            <div class="job-card-body">
+              <div class="job-title">Тестировщик</div>
+              <div class="project-name"><i class="fas fa-project-diagram"></i> Проект "vtapt.by"</div>
+              <div class="job-description">
+                <ul>
+                  <li>Тестирую REST API (интеграция 1С)</li>
+                  <li>Уточняю требования, разрабатываю с нуля и поддерживаю тестовые артефакты (чек-листы, баг-репорты), что позволило структурировать процесс тестирования</li>
+                  <li>Использую Postman (создание тестовых окружений, цепочек коллекций и переменных, написание автотестов с помощью стандартных сниппетов и простых скриптов)</li>
+                  <li>Использую Charles Proxy(Breakpoints, Throttling, Rewrite, Map Remote)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-card-footer"><span class="job-type">API тестирование</span><span class="text-muted">Коммерческий проект</span></div>
+          </div>
+        </div>
+        <!-- Naura.com -->
+        <!-- <div class="col-md-6 col-lg-6 mb-4">
+          <div class="job-card">
+            <div class="job-card-header">
+              <div class="company-logo"><i class="fas fa-rocket text-info"></i></div>
+              <div><div class="company-name">Naura.com</div><div class="job-date">Февраль 2026 - Наст. время</div></div>
+            </div>
+            <div class="job-card-body">
+              <div class="job-title">Тестировщик</div>
+              <div class="project-name"><i class="fas fa-project-diagram"></i> Стартап "nextapp.naura.io"</div>
+              <div class="job-description">
+                <ul>
+                  <li>Провожу исследовательское тестирование web и mobile версий приложения, tg-бота</li>
+                  <li>Работаю с требованиями, завожу баг-репорты</li>
+                  <li>Принимаю участие в разработке идей по улучшению и появлению новых функциональностей приложения</li>
+                  <li>В работе использую DevTools</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-card-footer"><span class="job-type">Стартап</span><span class="text-muted">Инновационный проект</span></div>
+          </div>
+        </div> -->
+        <!-- Gov -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="job-card">
+            <div class="job-card-header">
+              <div class="company-logo"><i class="fas fa-university text-warning"></i></div>
+              <div><div class="company-name">Гос. учреждение</div><div class="job-date">Май 2018 - Июнь 2026</div></div>
+            </div>
+            <div class="job-card-body">
+              <div class="job-title">Инженер, старший инженер</div>
+              <div class="project-name"><i class="fas fa-project-diagram"></i> Геоинформационные системы</div>
+              <div class="job-description">
+                <ul>
+                  <li>Принимал участие в пользовательской эксплуатации, тестирование web и десктопных приложений в сфере геоинформационных систем (ГИС-приложения)</li>
+                  <li>Работал с такими инструментами как HTML/CSS/JS, DevTools,  Git Bash, GitLab, Linux CLI, Proxmox</li>
+                </ul>
+              </div>
+            </div>
+            <div class="job-card-footer"><span class="job-type">ГИС-приложения</span><span class="text-muted">Государственный сектор</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses-section">
+    <div class="container">
+      <h2 class="section-title text-center">Курсы</h2>
+      <div class="text-center mb-5"><p class="lead">Профессиональная переподготовка</p></div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="course-card">
+            <div class="course-card-header"><div class="company-logo"><i class="fas fa-user-graduate text-primary"></i></div><div><div class="company-name">Курс Вадима Ксендзова</div><div class="course-date">2024-2025</div></div></div>
+            <div class="course-card-body"><div class="course-title">"Тестирование программного обеспечения”</div>
+              <!-- <div class="course-description"><ul><li>Теория тестирования</li><li>Тест-дизайн</li><li>API тестирование</li></ul></div> -->
+            </div>
+            <div class="course-card-footer"><span class="course-type">Онлайн-курс</span></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="course-card">
+            <div class="course-card-header"><div class="company-logo"><i class="fas fa-user-graduate text-info"></i></div><div><div class="company-name">Курс Артема Русова</div><div class="course-date">2025</div></div></div>
+            <div class="course-card-body"><div class="course-title">"Тестирование ПО с нуля. Уровень PRO"</div></div>
+            <div class="course-card-footer"><span class="course-type">Онлайн-курс</span></div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="course-card">
+            <div class="course-card-header"><div class="company-logo"><i class="fas fa-laptop-code text-success"></i></div><div><div class="company-name">Курс Вадима Ксендзова</div><div class="course-date">ноябрь-декабрь 2025</div></div></div>
+            <div class="course-card-body">
+              <div class="course-title">"SandBox Web"<br>Практический интенсив на коммерческом проекте</div>
+              <!-- <div class="course-description"><ul><li>Реальные проекты</li><li>Документация</li><li>Командная работа</li></ul></div> -->
+            </div>
+            <div class="course-card-footer"><span class="course-type">Коммерческая практика</span></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title text-center">Навыки и инструменты</h2>
+      <div class="text-center mb-5"><p class="lead">Широкий спектр навыков</p></div>
+      <div class="core-skills mb-4">
+        <div class="category-content">
+          <div class="core-skill-grid">
+            <span class="core-skill">Теория тестирования</span>
+            <span class="core-skill">Тестовая документация</span>
+            <span class="core-skill">Техники тест-дизайна</span>
+            <span class="core-skill">Agile/Scrum</span>
+            <span class="core-skill">TMS (Jira, TestIT)</span>
+            <!-- <span class="core-skill">SDLC / STLC</span> -->
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="testing-category manual-category">
+            <div class="category-header"><div class="category-icon"><i class="fas fa-hand-point-up"></i></div><h3 class="category-title">Ручное тестирование</h3></div>
+            <div class="category-content">
+              <div class="skill-grid">
+                <span class="skill-badge">Функциональное тестирование</span>
+                <span class="skill-badge">Исследовательское тестирование</span>
+                <span class="skill-badge">Клиент-серверная архитектура</span>
+                <span class="skill-badge">Ad-hoc</span>
+                <span class="skill-badge">REST</span>
+                <span class="skill-badge">SOAP</span>
+                <span class="skill-badge">GraphQL</span>
+                <span class="skill-badge">gRPC</span>
+                <span class="skill-badge">WebSocket</span>
+                <span class="skill-badge">DevTools</span>
+                <span class="skill-badge">Postman</span>
+                <span class="skill-badge">Charles</span>
+                <span class="skill-badge">Proxyman</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Git Bash</span>
+                <span class="skill-badge">HTML, CSS</span>
+                <span class="skill-badge">Figma</span>
+                <span class="skill-badge">UI-элементы</span>
+                <span class="skill-badge">Мобильное тестирование</span>
+                <span class="skill-badge">Android<br> Studio</span>
+                <span class="skill-badge">AI-инструменты</span>
+              </div>
+              <div class="category-description">Понимание процессов ручного тестирования.</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="testing-category automation-category">
+            <div class="category-header"><div class="category-icon"><i class="fas fa-robot"></i></div><h3 class="category-title">Автоматизация тестирования API</h3></div>
+            <div class="category-content">
+              <div class="skill-grid">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Pytest</span>
+                <span class="skill-badge">HTTPX</span>
+                <span class="skill-badge">Pydantic</span>
+                <span class="skill-badge">Faker</span>
+                <span class="skill-badge">Allure</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">CI/CD</span>
+                <span class="skill-badge">Docker</span>
+              </div>
+              <div class="category-description">Опыт написания автотестов API на Python. Планирую освоить UI.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-light contact-section">
+    <div class="container">
+      <h2 class="section-title text-center">Связаться со мной</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-content"><h5>Телефон</h5><p>+375 33 621-21-98</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-content"><h5>Электронная почта</h5><p>dan1795dan@gmail.com</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div class="contact-content"><h5>LinkedIn</h5><p><a href="https://www.linkedin.com/in/danya1795" target="_blank">linkedin.com/in/danya1795</a></p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-content"><h5>GitHub</h5><p><a href="https://github.com/dan1795qa" target="_blank">github.com/dan1795qa</a></p></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="position-relative d-inline-block" style="max-width: 250px;">
+            <img src="./images/foto2.jpg" class="contact-profile-img" alt="Профиль Даниил Бабарин" width="250" height="250" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-4 mb-md-0 text-center"><h3 class="footer-title">QA Portfolio</h3></div>
+        <div class="col-md-12 mb-4">
+          <ul class="footer-links">
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#experience">Опыт</a></li>
+            <li><a href="#courses">Курсы</a></li>
+            <li><a href="#skills">Навыки</a></li>
+            <li><a href="#contact">Связь</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 QA Engineer | Даниил Бабарин. Все права защищены</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
 </html>
