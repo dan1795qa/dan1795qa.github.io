@@ -221,6 +221,9 @@ section {
     margin-right: 8px;
     color: var(--accent-color);
 }
+.project-name a {
+    text-decoration: none;
+}
 .job-description ul, .course-description ul {
     padding-left: 20px;
     margin-bottom: 0;
