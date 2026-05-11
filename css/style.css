@@ -546,8 +546,8 @@ footer {
 }
 .core-skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* gap: 100px; */
 }
 .core-skill {
     background: white;
