@@ -209,6 +209,9 @@ section {
     color: var(--primary-color);
     font-size: 1.1rem;
 }
+.company-name a{
+    text-decoration: none;
+}
 .job-date, .course-date {
     display: inline-block;
     background: rgba(67, 97, 238, 0.1);
